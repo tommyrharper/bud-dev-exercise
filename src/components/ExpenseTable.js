@@ -5,8 +5,7 @@ const ExpenseTable = ({ expenses }) => (
   <table style={{ width: "100%" }}>
     <tr>
       <th>Date</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <th>Cost</th>
       <th>Title</th>
       <th>Description</th>
     </tr>
