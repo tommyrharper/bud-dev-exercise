@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const App = () => {
   const [response, setResponse] = useState([]);
@@ -7,10 +7,10 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('http://www.mocky.io/v2/5c62e7c33000004a00019b05')
+    fetch("http://www.mocky.io/v2/5c62e7c33000004a00019b05")
       .then((res) => res.json())
       .then((res) => {
-        console.log('res', res);
+        console.log("res", res);
         setResponse(res);
         setLoading(false);
       })
@@ -19,10 +19,8 @@ const App = () => {
   return (
     <div>
       Hello World
-      { hasError
-        && <p>An error occurred</p>}
-      { loading
-        && <div>Loading...</div>}
+      {hasError && <p>An error occurred</p>}
+      {loading && <div>Loading...</div>}
     </div>
   );
 };
