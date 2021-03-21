@@ -1,5 +1,5 @@
 import React from "react";
-import { AppContainer, Heading } from "./StyledComponents/StyledComponents";
+import { AppContainer, Heading, Loader } from "./StyledComponents/StyledComponents";
 import ExpenseTable from "./ExpenseTable";
 import useFetch from "../hooks/useFetch";
 
@@ -16,14 +16,14 @@ const App = () => {
       .sort((txa, txb) => txb.amount.value - txa.amount.value)
       .slice(0, 10);
   }
-  console.log(`smallestExpenses`, smallestExpenses);
+
   const displayTransactions = !hasError && !loading && response;
 
   return (
     <AppContainer>
       <Heading>Bud - 10 Smallest Expenses</Heading>
       {hasError && <p>An error occurred</p>}
-      {loading && <div>Loading...</div>}
+      {loading && <Loader />}
       {displayTransactions && <ExpenseTable expenses={smallestExpenses} />}
     </AppContainer>
   );

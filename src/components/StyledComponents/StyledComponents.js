@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const green = '#009879';
+
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@ export const AppContainer = styled.div`
 `;
 
 export const Heading = styled.h1`
-  color: #009879;
+  color: ${green};
 `;
 
 export const Table = styled.table`
@@ -22,7 +24,7 @@ export const Table = styled.table`
 `;
 
 export const TopRow = styled.tr`
-  background-color: #009879;
+  background-color: ${green};
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -38,14 +40,38 @@ export const Row = styled.tr`
     background-color: #f3f3f3;
   }
   &:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid ${green};
   }
   &:active-row {
     font-weight: bold;
-    color: #009879;
+    color: ${green};
   }
 `;
 
 export const Cell = styled.td`
   padding: 12px 15px;
+`;
+
+export const Loader = styled.div`
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  &:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid ${green};
+    border-color: ${green} transparent ${green} transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 `;
