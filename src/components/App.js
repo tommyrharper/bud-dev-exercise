@@ -6,7 +6,7 @@ import {
   Error,
 } from "./StyledComponents/StyledComponents";
 import ExpenseTable from "./ExpenseTable";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../Hooks/useFetch";
 import get10SmallestTransactions from "./Helpers/Helpers";
 
 const API_ENDPOINT = "http://www.mocky.io/v2/5c62e7c33000004a00019b05";
