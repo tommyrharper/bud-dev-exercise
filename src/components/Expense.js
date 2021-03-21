@@ -1,27 +1,24 @@
 import React from "react";
+import { Row, Cell } from "./StyledComponents/StyledComponents";
 
 const Expense = ({ expense }) => {
-  console.log(`expense`, expense);
   const {
-    amount,
-    category_title,
-    description,
-    date,
+    amount, category_title, description, date,
   } = expense;
   const { value, currency_iso } = amount;
   const currencyObj = {
-    GBP: '£',
-    USD: '$',
-    EUR: '€',
+    GBP: "£",
+    USD: "$",
+    EUR: "€",
   };
 
   return (
-    <tr>
-      <td>{date}</td>
-      <td>{`${currencyObj[currency_iso]} ${Math.abs(value)}`}</td>
-      <td>{category_title}</td>
-      <td>{description}</td>
-    </tr>
+    <Row>
+      <Cell>{date}</Cell>
+      <Cell>{`${currencyObj[currency_iso]} ${Math.abs(value)}`}</Cell>
+      <Cell>{category_title}</Cell>
+      <Cell>{description}</Cell>
+    </Row>
   );
 };
 

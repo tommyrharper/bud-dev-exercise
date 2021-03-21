@@ -1,6 +1,7 @@
 import React from "react";
 import ExpenseTable from "./ExpenseTable";
 import useFetch from "../hooks/useFetch";
+import { Heading } from './StyledComponents/StyledComponents';
 
 const App = () => {
   const [response, loading, hasError] = useFetch(
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Bud</h1>
+      <Heading>Bud - 10 Smallest Expenses</Heading>
       {hasError && <p>An error occurred</p>}
       {loading && <div>Loading...</div>}
       {displayTransactions && <ExpenseTable expenses={smallestExpenses} />}
