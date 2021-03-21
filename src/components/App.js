@@ -1,7 +1,7 @@
 import React from "react";
+import { AppContainer, Heading } from "./StyledComponents/StyledComponents";
 import ExpenseTable from "./ExpenseTable";
 import useFetch from "../hooks/useFetch";
-import { Heading } from './StyledComponents/StyledComponents';
 
 const App = () => {
   const [response, loading, hasError] = useFetch(
@@ -20,12 +20,12 @@ const App = () => {
   const displayTransactions = !hasError && !loading && response;
 
   return (
-    <div>
+    <AppContainer>
       <Heading>Bud - 10 Smallest Expenses</Heading>
       {hasError && <p>An error occurred</p>}
       {loading && <div>Loading...</div>}
       {displayTransactions && <ExpenseTable expenses={smallestExpenses} />}
-    </div>
+    </AppContainer>
   );
 };
 
