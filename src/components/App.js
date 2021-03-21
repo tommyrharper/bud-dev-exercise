@@ -20,6 +20,7 @@ const App = () => {
 
   return (
     <div>
+      <h1>Bud</h1>
       {hasError && <p>An error occurred</p>}
       {loading && <div>Loading...</div>}
       {displayTransactions && <ExpenseTable expenses={smallestExpenses} />}
