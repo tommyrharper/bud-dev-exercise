@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const green = '#009879';
+const green = "#009879";
 
 export const AppContainer = styled.div`
   display: flex;
@@ -74,4 +74,14 @@ export const Loader = styled.div`
   100% {
     transform: rotate(360deg);
   }
+`;
+
+export const Error = styled.div`
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 15px 10px 15px 10px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #d8000c;
+  background-color: #ffbaba;
 `;
