@@ -16,8 +16,8 @@ const Expense = ({ expense }) => {
     <Row>
       <Cell>{date}</Cell>
       <Cell>{`${currencyObj[currency_iso]} ${Math.abs(value)}`}</Cell>
-      <Cell>{category_title}</Cell>
       <Cell>{description}</Cell>
+      <Cell>{category_title}</Cell>
     </Row>
   );
 };
