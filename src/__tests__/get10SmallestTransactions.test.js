@@ -1,4 +1,4 @@
-import get10SmallestExpenses from "../components/Helpers/Helpers";
+import get10SmallestExpenses from "../Helpers/Helpers";
 
 const mockTransactionData = {
   transactions: [
