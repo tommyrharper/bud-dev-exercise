@@ -9,17 +9,15 @@ const useFetch = (url, callback, opts) => {
 
   const { response, loading, hasError } = fetchData;
 
-  useEffect(() => {
+  useEffect(async () => {
     setFetchData({ ...fetchData, loading: true });
-    fetch(url, opts)
-      .then((res) => res.json())
-      .then((res) => {
-        const result = callback ? callback(res) : res;
-        setFetchData({ ...fetchData, loading: false, response: result });
-      })
-      .catch(() => {
-        setFetchData({ ...fetchData, loading: false, hasError: true });
-      });
+    try {
+      const res = await fetch(url, opts).then((payload) => payload.json());
+      const result = callback ? callback(res) : res;
+      setFetchData({ ...fetchData, loading: false, response: result });
+    } catch {
+      setFetchData({ ...fetchData, loading: false, hasError: true });
+    }
   }, [url]);
 
   return [response, loading, hasError];
