@@ -36,8 +36,8 @@ it("All transactions should have a negative value", () => {
 });
 
 it("It should return the 10 smallest expense", () => {
-  let largest = -Infinity;
   // Find the largest expense
+  let largest = -Infinity;
   for (const tx of result) {
     if (Math.abs(tx.amount.value) > largest) largest = tx.amount.value;
   }
