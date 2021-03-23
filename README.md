@@ -3,7 +3,7 @@
 
 # Bud Development Exercise
 
-Development Exercise for Bud.
+Bud Development Exercise.
 
 ![](./images/2021-03-23-16-24-27.png)
 
@@ -29,6 +29,24 @@ npm run dev
 ```
 5. Go to `localhost:9000`.
 
+
+## Production build
+
+1. Enter the projects root directory.
+2. Install `node_modules` if you haven't already using:
+```
+npm install
+```
+3. Then you can use the command:
+```
+npm run build
+```
+4. This should bundle the production build into the `/dist` folder, where you should see:
+   - `bundle.js`
+   - `bundle.js.LICENSE.txt`
+   - `main.bundle.css`
+   - `index.html`
+5. You can take a look at the production build by opening `/dist/index.html` in your browser.
 
 
 ## Testing

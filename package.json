@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --env NODE_ENV=development --mode development",
+    "build": "npx webpack --config webpack.config.js",
     "test": "jest"
   },
   "jest": {
