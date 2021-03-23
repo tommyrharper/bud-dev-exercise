@@ -14,6 +14,7 @@ Bud Development Exercise.
 - Tested with Enzyme and Jest
   - 100% test coverage
 - Linted using ESLint
+- Built with StyledComponents
 
 ## Quick Start Guide
 
