@@ -5,16 +5,9 @@ import ExpenseTable from "../components/ExpenseTable";
 import Expense from "../components/Expense";
 
 describe("ExpenseTable tests", () => {
-  const expenses = [
-    {
-      amount: {
-        value: 100,
-      },
-    },
-  ];
-
+  const expenses = [];
   // Generate fake transactions
-  for (let i = 0; i < 99; i++) {
+  for (let i = 0; i < 100; i++) {
     const num = parseFloat((Math.random() * -20000).toFixed(2));
     expenses.push({
       amount: {
