@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Cell } from './StyledComponents/StyledComponents';
 
 const Expense = ({ expense }) => {
@@ -20,6 +21,18 @@ const Expense = ({ expense }) => {
       <Cell>{category_title}</Cell>
     </Row>
   );
+};
+
+Expense.propTypes = {
+  expense: PropTypes.shape({
+    amount: PropTypes.shape({
+      value: PropTypes.number,
+      currency_iso: PropTypes.string,
+    }),
+    category_title: PropTypes.string,
+    description: PropTypes.string,
+    date: PropTypes.string,
+  }).isRequired,
 };
 
 export default Expense;
