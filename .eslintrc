@@ -4,7 +4,8 @@
   "ignorePatterns": ["webpack.config.js", "postcss.config.js"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "camelcase": 0
+    "camelcase": 0,
+    "quotes": 0
   },
   "env": {
     "browser": true,
