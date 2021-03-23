@@ -11,10 +11,10 @@ Bud Development Exercise.
 
 - React v17
 - Configured using Webpack
+- Built with StyledComponents
 - Tested with Enzyme and Jest
   - 100% test coverage
 - Linted using ESLint
-- Built with StyledComponents
 
 ## Quick Start Guide
 
