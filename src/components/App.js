@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import {
   AppContainer,
   Heading,
   Loader,
   Error,
-} from "./StyledComponents/StyledComponents";
-import ExpenseTable from "./ExpenseTable";
-import useFetch from "../Hooks/useFetch";
-import get10SmallestExpenses from "../Helpers/get10SmallestExpenses";
+} from './StyledComponents/StyledComponents';
+import ExpenseTable from './ExpenseTable';
+import useFetch from '../Hooks/useFetch';
+import get10SmallestExpenses from '../Helpers/get10SmallestExpenses';
 
-const API_ENDPOINT = "http://www.mocky.io/v2/5c62e7c33000004a00019b05";
+const API_ENDPOINT = 'http://www.mocky.io/v2/5c62e7c33000004a00019b05';
 
 const App = () => {
   const [response, loading, hasError] = useFetch(API_ENDPOINT, get10SmallestExpenses);

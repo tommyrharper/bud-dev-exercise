@@ -1,16 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Row, Cell } from "./StyledComponents/StyledComponents";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Row, Cell } from './StyledComponents/StyledComponents';
 
 const Expense = ({ expense }) => {
   const {
-    amount, category_title, description, date
+    amount, category_title, description, date,
   } = expense;
   const { value, currency_iso } = amount;
   const currencyObj = {
-    GBP: "£",
-    USD: "$",
-    EUR: "€",
+    GBP: '£',
+    USD: '$',
+    EUR: '€',
   };
 
   return (

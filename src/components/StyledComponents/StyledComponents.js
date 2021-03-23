@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const green = "#009879";
+const green = '#009879';
 
 export const AppContainer = styled.div`
   display: flex;

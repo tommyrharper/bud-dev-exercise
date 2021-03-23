@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Expense from "./Expense";
-import { Table, TopRow, ColHeader } from "./StyledComponents/StyledComponents";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Expense from './Expense';
+import { Table, TopRow, ColHeader } from './StyledComponents/StyledComponents';
 
 const ExpenseTable = ({ expenses }) => (
   <Table>
@@ -31,7 +31,7 @@ ExpenseTable.propTypes = {
       category_title: PropTypes.string,
       description: PropTypes.string,
       date: PropTypes.string,
-    })
+    }),
   ).isRequired,
 };
 
