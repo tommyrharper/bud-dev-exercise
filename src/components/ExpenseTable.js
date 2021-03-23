@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Expense from "./Expense";
-import { Table, TopRow, ColHeader } from './StyledComponents/StyledComponents';
+import { Table, TopRow, ColHeader } from "./StyledComponents/StyledComponents";
 
 const ExpenseTable = ({ expenses }) => (
   <Table>
@@ -19,5 +20,19 @@ const ExpenseTable = ({ expenses }) => (
     </tbody>
   </Table>
 );
+
+ExpenseTable.propTypes = {
+  expenses: PropTypes.arrayOf(
+    PropTypes.shape({
+      amount: PropTypes.shape({
+        value: PropTypes.number,
+        currency_iso: PropTypes.string,
+      }),
+      category_title: PropTypes.string,
+      description: PropTypes.string,
+      date: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default ExpenseTable;
