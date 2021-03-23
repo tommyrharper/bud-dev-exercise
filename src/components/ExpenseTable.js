@@ -1,5 +1,5 @@
-import React from "react";
-import Expense from "./Expense";
+import React from 'react';
+import Expense from './Expense';
 import { Table, TopRow, ColHeader } from './StyledComponents/StyledComponents';
 
 const ExpenseTable = ({ expenses }) => (

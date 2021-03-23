@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Cell } from "./StyledComponents/StyledComponents";
+import React from 'react';
+import { Row, Cell } from './StyledComponents/StyledComponents';
 
 const Expense = ({ expense }) => {
   const {
@@ -7,9 +7,9 @@ const Expense = ({ expense }) => {
   } = expense;
   const { value, currency_iso } = amount;
   const currencyObj = {
-    GBP: "£",
-    USD: "$",
-    EUR: "€",
+    GBP: '£',
+    USD: '$',
+    EUR: '€',
   };
 
   return (
