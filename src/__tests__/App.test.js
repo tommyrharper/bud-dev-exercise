@@ -26,8 +26,8 @@ describe("Basic App functionality", () => {
     const wrapper = shallow(<App />);
     expect(
       wrapper.containsMatchingElement(
-        <Heading>Bud - 10 Smallest Expenses</Heading>
-      )
+        <Heading>Bud - 10 Smallest Expenses</Heading>,
+      ),
     ).toEqual(true);
   });
 });
@@ -37,7 +37,7 @@ describe("Async app functionality", () => {
     useFetch.mockReturnValue([[], false, false]);
     const wrapper = shallow(<App />);
     expect(
-      wrapper.containsMatchingElement(<ExpenseTable expenses={[]} />)
+      wrapper.containsMatchingElement(<ExpenseTable expenses={[]} />),
     ).toEqual(true);
   });
 
@@ -51,7 +51,7 @@ describe("Async app functionality", () => {
     useFetch.mockReturnValue([null, false, true]);
     const wrapper = shallow(<App />);
     expect(
-      wrapper.containsMatchingElement(<Error>Oops, there was a problem!</Error>)
+      wrapper.containsMatchingElement(<Error>Oops, there was a problem!</Error>),
     ).toEqual(true);
   });
 });

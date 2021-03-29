@@ -5,7 +5,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "camelcase": 0,
-    "quotes": 0
+    "quotes": 0,
+    "no-plusplus": 0,
+    "no-restricted-syntax": 0
   },
   "env": {
     "browser": true,
